@@ -1,6 +1,7 @@
 #ifndef RBTreeNode_H
 #define RBTreeNode_H
 
+
 template <typename K, typename V> struct RBTreeNode {
   K key;
   V value;
@@ -8,10 +9,8 @@ template <typename K, typename V> struct RBTreeNode {
   RBTreeNode *left;
   RBTreeNode *right;
   RBTreeNode *parent;
-  RBTreeNode(const K &k, const V &v, RBTreeNode *lc, RBTreeNode *rc, const char &col)
-      : key(k), value(v), left(lc), right(rc), color(col), parent(nullptr) {}
   RBTreeNode(const K &k, const V &v)
-      : key(k), value(v), left(nullptr), right(nullptr),color('R'), parent(nullptr) {}
+      : key(k), value(v), color('R'), left(nullptr), right(nullptr), parent(nullptr) {}
 };
 
 #endif
