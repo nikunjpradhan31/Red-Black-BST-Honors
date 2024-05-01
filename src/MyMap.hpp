@@ -32,10 +32,10 @@ void MyMap<K, V>::insert_helper(TreeNode<K, V> *&rt, const K &new_key,
 
 template <typename K, typename V>
 TreeNode<K, V> *MyMap<K, V>::get_min(TreeNode<K, V> *rt) {
-  if (rt->left == nullptr)
-    return rt;
-  else
+  if (rt->left != nullptr)
     get_min(rt->left);
+  else
+    return rt;
 }
 
 template <typename K, typename V>
@@ -184,6 +184,16 @@ void MyMap<K, V>::convert_to_sorted_list(TreeNode<K, V> *&rt,
   convert_to_sorted_list(rt->left, sorted);
   sorted.push_back(rt->value);
   convert_to_sorted_list(rt->right, sorted);
+}
+
+template <typename K, typename V>
+int MyMap<K,V>::getHeight(TreeNode<K, V>* node){
+
+  if(node == nullptr)
+    return -1;
+
+  return 1 + std::max(getHeight(node->left),getHeight(node->right));
+
 }
 
 template <typename K, typename V>

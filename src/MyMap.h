@@ -110,6 +110,8 @@ public:
 
   void clear();
 
+  int getHeight(TreeNode<K, V>* node);
+
   void insert(const K &new_key, const V &new_value);
 
   void erase(const K &erase_key);
