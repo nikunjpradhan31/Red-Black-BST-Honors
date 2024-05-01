@@ -344,7 +344,7 @@ void RBMyMap<K, V>::fixDoubleBlack(RBTreeNode<K, V>* x)
     if(x == x->parent->left)
         sibling = x->parent->right;
     else
-        sibling = x->parent->right;
+        sibling = x->parent->left;
     if (sibling == NULL) {
       // No sibiling, double black pushed up
       fixDoubleBlack(parent);
