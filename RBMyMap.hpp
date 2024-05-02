@@ -33,6 +33,9 @@ RBTreeNode<K, V>* RBMyMap<K, V>::insert_helper(RBTreeNode<K, V> * root, RBTreeNo
         root->right = insert_helper(root->right, pt);
         root->right->parent = root;
     }
+    else if (pt->key == root->key) { //if duplicate node return the orginal node
+      return pt;
+    }
 
     return root;//return if node is already exists
 }

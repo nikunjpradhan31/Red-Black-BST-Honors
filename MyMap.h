@@ -61,31 +61,8 @@ private:
   TreeNode<K, V> *clone(const TreeNode<K, V> *rt);
 
 
-  void inorderTraversalHelper(TreeNode<K,V>* node) {
-        if (node != nullptr) {
-            inorderTraversalHelper(node->left);
-            std::cout << node->key;
-            inorderTraversalHelper(node->right);
-        }
-    }
  
-void printTreeHelper(const TreeNode<K,V>* rt, int space) {
-    const int spacePerLevel = 3; // Change this to increase or decrease spacing between levels
-    // if (rt == nullptr) {
-    //     // Print space for leaf node
-    //     std::cout << std::string(space * spacePerLevel, ' ') << "NN" << std::endl;
-    //     return;
-    // }
-    if (rt != nullptr) {
-        printTreeHelper(rt->right, space + 1); // Recur for right subtree
-
-        // Print current node after space
-        // Count of spaces is depth * spacePerLevel
-        std::cout << std::string(space * spacePerLevel, ' ') << rt->key << std::endl;
-
-        printTreeHelper(rt->left, space + 1); // Recur for left subtree
-    }
-}
+    void printTreeHelper(const TreeNode<K,V>* rt, int space);
 
 public:
   MyMap();
@@ -122,9 +99,6 @@ public:
 
   void convert_to_sorted_list(TreeNode<K, V> *&rt, std::vector<V> &sorted);
 
-  void inorderTraversal() {
-        inorderTraversalHelper(root);
-    }
  
   void printTree() {
         printTreeHelper(root, 0);

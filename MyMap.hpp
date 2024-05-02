@@ -32,10 +32,12 @@ void MyMap<K, V>::insert_helper(TreeNode<K, V> *&rt, const K &new_key,
 
 template <typename K, typename V>
 TreeNode<K, V> *MyMap<K, V>::get_min(TreeNode<K, V> *rt) {
-  if (rt->left != nullptr)
-    get_min(rt->left);
-  else
-    return rt;
+    TreeNode<K, V> *temp = rt;
+    //goes deeper into the tree (minimum)
+    while (temp->left != nullptr)
+        temp = temp->left;
+
+    return temp;
 }
 
 template <typename K, typename V>
@@ -194,6 +196,25 @@ int MyMap<K,V>::getHeight(TreeNode<K, V>* node){
 
   return 1 + std::max(getHeight(node->left),getHeight(node->right));
 
+}
+
+template <typename K, typename V>
+void MyMap<K,V>::printTreeHelper(const TreeNode<K,V>* rt, int space) {
+    const int spacePerLevel =5; // Change this to increase or decrease spacing between levels
+    // if (rt == nullptr) {
+    //     // Print space for leaf node
+    //     std::cout << std::string(space * spacePerLevel, ' ') << "NN" << std::endl;
+    //     return;
+    // }
+    if (rt != nullptr) {
+        printTreeHelper(rt->right, space + 1); // Recur for right subtree
+
+        // Print current node after space
+        // Count of spaces is depth * spacePerLevel
+        std::cout << std::string(space * spacePerLevel, ' ') << rt->key << std::endl;
+
+        printTreeHelper(rt->left, space + 1); // Recur for left subtree
+    }
 }
 
 template <typename K, typename V>

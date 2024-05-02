@@ -1,4 +1,5 @@
-#include "RBMyMap.h"
+
+#include "MyMap.h"
 #include <fstream>
 #include <sstream>
 #include <string>
@@ -22,7 +23,7 @@ int main() {
         if (entry.path().extension() == ".txt") { // Check if the file is a .txt file
             std::ifstream file(entry.path());
             std::string line;
-            RBMyMap<int, int> map;
+            MyMap<int, int> map;
 
             while (getline(file, line)) {
                 std::istringstream iss(line);
