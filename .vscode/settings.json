@@ -1,9 +1,0 @@
-{
-    "files.associations": {
-        "fstream": "cpp",
-        "chrono": "cpp",
-        "span": "cpp",
-        "iostream": "cpp",
-        "iosfwd": "cpp"
-    }
-}
