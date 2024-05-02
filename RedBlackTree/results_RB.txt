@@ -1,0 +1,12 @@
+Normal Height of the tree for file "input10k.txt": 28 with 2609 nodes
+Normal Height of the tree for file "input4000.txt": 13 with 459 nodes
+Normal Height of the tree for file "input8000.txt": 25 with 497 nodes
+Normal Height of the tree for file "input_insert_remove.txt": 13 with 290 nodes
+Normal Height of the tree for file "reverse_sorted10k.txt": 24 with 8642 nodes
+Normal Height of the tree for file "reverse_sorted4000.txt": 21 with 3274 nodes
+Normal Height of the tree for file "reverse_sorted8000.txt": 22 with 5539 nodes
+Normal Height of the tree for file "sorted10k.txt": 24 with 8642 nodes
+Normal Height of the tree for file "sorted4000.txt": 21 with 3274 nodes
+Normal Height of the tree for file "sorted8000.txt": 22 with 5539 nodes
+Normal Height of the tree for file "sorted_both.txt": 19 with 1760 nodes
+Normal Height of the tree for file "sorted_both_reverse.txt": 19 with 1749 nodes

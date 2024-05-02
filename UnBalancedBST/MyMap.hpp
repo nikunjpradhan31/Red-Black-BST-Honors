@@ -192,7 +192,7 @@ template <typename K, typename V>
 int MyMap<K,V>::getHeight(TreeNode<K, V>* node){
 
   if(node == nullptr)
-    return -1;
+    return 0;
 
   return 1 + std::max(getHeight(node->left),getHeight(node->right));
 

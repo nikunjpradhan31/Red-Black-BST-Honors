@@ -19,6 +19,7 @@ int getRandomNumber() {
 
 int main() {
     // Loop through each file in the TestFiles directory
+    std::ofstream outputFile("results_BST.txt");
     for (const auto& entry : fs::directory_iterator("TestFiles")) {
         if (entry.path().extension() == ".txt") { // Check if the file is a .txt file
             std::ifstream file(entry.path());
@@ -41,7 +42,7 @@ int main() {
             }
 
             //map.printTree();
-            std::cout << "Normal Height of the tree for file " << entry.path().filename() << ": " << map.getHeight(map.begin()) << std::endl;
+            outputFile << "Normal Height of the tree for file " << entry.path().filename() << ": " << map.getHeight(map.begin()) <<" with " << map.size()<< " nodes"<< std::endl;
 
             file.close();
         }

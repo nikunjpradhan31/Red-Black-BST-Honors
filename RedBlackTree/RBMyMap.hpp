@@ -434,7 +434,7 @@ template <typename K, typename V>
 int RBMyMap<K,V>::getHeight(RBTreeNode<K, V>* node){
 
   if(node == nullptr) // reached a null node 
-    return -1; // delete nullptrs from the height
+    return 0; // delete nullptrs from the height
 
   return 1 + std::max(getHeight(node->left),getHeight(node->right));
 

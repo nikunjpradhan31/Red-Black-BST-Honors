@@ -22,10 +22,10 @@ int main() {
     char commands[3] = {'I','E'};
 
     // Generate lines of output
-    for (int i = 0; i < 1000; ++i) {
+    for (int i = 0; i < 40; ++i) {
         char command = commands[std::rand() % 3];  // Randomly select 'I', or 'E'
         //char command = commands[0];
-        int number = std::rand() % 3000;  // Generate a random number between 0 and 3000
+        int number = std::rand() % 60;  // Generate a random number between 0 and 3000
 
         // Write to the file
         outputFile << command << " " << number << std::endl;
